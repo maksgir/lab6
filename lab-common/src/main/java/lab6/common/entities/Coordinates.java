@@ -9,7 +9,7 @@ import java.io.Serializable;
  */
 public class Coordinates implements Serializable {
     public static final Integer MAX_X = 981;
-    public static final Long MAX_Y = Long.MAX_VALUE;
+    public static final int MAX_Y = 1000;
 
     @NotNull(message = "The X coordinate cannot be null")
     @Max(value = 981, message = "The X coordinate must be less than 947")

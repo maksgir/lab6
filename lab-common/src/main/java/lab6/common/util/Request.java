@@ -41,7 +41,7 @@ public class Request implements Serializable {
         return numericArgument;
     }
 
-    public Route getBandArgument() {
+    public Route getRouteArgument() {
         return routeArgument;
     }
 

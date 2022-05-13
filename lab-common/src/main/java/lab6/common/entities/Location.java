@@ -1,8 +1,9 @@
 package lab6.common.entities;
 
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
-public class Location {
+public class Location implements Serializable {
 
     /**
      * поля для хранения координат

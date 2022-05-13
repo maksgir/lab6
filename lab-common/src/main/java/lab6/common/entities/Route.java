@@ -20,7 +20,7 @@ import java.util.Comparator;
  */
 
 @XStreamAlias("route")
-public class Route implements Comparable<Route> {
+public class Route implements Comparable<Route>, Serializable {
     /**
      * статичное поле для хранения id следующего создаваемого маршрута
      */
@@ -38,7 +38,7 @@ public class Route implements Comparable<Route> {
 
     @NotNull
     @PastOrPresent(message = "The collection cannot have a creation date in the future time")
-    private final LocalDate creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
+    private final ZonedDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
 
     @NotNull
     private Location from; //Поле не может быть null
@@ -50,12 +50,12 @@ public class Route implements Comparable<Route> {
     private long distance; //Значение поля должно быть больше 1
 
     public Route() {
-        creationDate = LocalDate.now();
+        this.creationDate = ZonedDateTime.now(ZoneId.systemDefault());
     }
 
     public Route(Long id) {
         this.id = id;
-        creationDate = LocalDate.now();
+        this.creationDate = ZonedDateTime.now(ZoneId.systemDefault());
     }
 
 
@@ -63,6 +63,9 @@ public class Route implements Comparable<Route> {
         this.id = id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public long getId() {
         return id;
@@ -140,11 +143,7 @@ public class Route implements Comparable<Route> {
     }
 
     public void setDistance(long distance) {
-        if (distance <= 1) {
-            throw new IllegalArgumentException("Дистанция должна быть больше 1");
-        } else {
-            this.distance = distance;
-        }
+        this.distance = distance;
 
     }
 
@@ -160,5 +159,7 @@ public class Route implements Comparable<Route> {
                 this.name, this.id, this.coordinates.toString(),
                 getCreationDate(), this.from.toString(), this.to.toString(), this.distance);
     }
+
+
 }
 

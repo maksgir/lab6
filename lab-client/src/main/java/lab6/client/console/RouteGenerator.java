@@ -55,9 +55,9 @@ public class RouteGenerator {
 
     private void getYCoordinate() {
         long y = CommandValidators.validateInput(arg -> ((long) arg) <= Coordinates.MAX_Y,
-                "Enter the X coordinate of the route (its value should be no more than " + Coordinates.MAX_Y + ")",
+                "Enter the Y coordinate of the route (its value should be no more than " + Coordinates.MAX_Y + ")",
                 "Error processing the number, repeat the input",
-                "The X coordinate should be no more than " + Coordinates.MAX_Y + ", repeat the input",
+                "The Y coordinate should be no more than " + Coordinates.MAX_Y + ", repeat the input",
                 Long::parseLong,
                 false,
                 sc);
@@ -112,9 +112,9 @@ public class RouteGenerator {
     }
 
     private void getLocationFrom() {
-        generatedRoute.getTo().setName(getLocationName());
-        generatedRoute.getTo().setX(getLocationX());
-        generatedRoute.getTo().setY(getLocationY());
+        generatedRoute.getFrom().setName(getLocationName());
+        generatedRoute.getFrom().setX(getLocationX());
+        generatedRoute.getFrom().setY(getLocationY());
     }
 
 
@@ -123,8 +123,9 @@ public class RouteGenerator {
         getXCoordinate();
         getYCoordinate();
         getDistance();
-        getLocationTo();
         getLocationFrom();
+        getLocationTo();
+
     }
 
 

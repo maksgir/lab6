@@ -1,0 +1,62 @@
+<list>
+    <Route>
+        <id>1</id>
+        <name>Поездка домой</name>
+        <coordinates>
+            <x>100</x>
+            <y>200</y>
+        </coordinates>
+        <creationDate>2022-02-17T21:53:57.5651566+03:00[Europe/Moscow]</creationDate>
+        <from>
+            <x>15.5</x>
+            <y>100</y>
+            <name>Санкт-Петербург</name>
+        </from>
+        <to>
+            <x>10.7</x>
+            <y>50</y>
+            <name>Калининград</name>
+        </to>
+        <distance>1079</distance>
+    </Route>
+    <Route>
+        <id>2</id>
+        <name>Поездка на работу</name>
+        <coordinates>
+            <x>75</x>
+            <y>3000</y>
+        </coordinates>
+        <creationDate>2022-02-17T21:53:57.5651566+03:00[Europe/Moscow]</creationDate>
+        <from>
+            <x>15.5</x>
+            <y>100</y>
+            <name>Санкт-Петербург</name>
+        </from>
+        <to>
+            <x>20.1</x>
+            <y>600</y>
+            <name>Москва</name>
+        </to>
+        <distance>807</distance>
+    </Route>
+    <Route>
+        <id>3</id>
+        <name>Поездка на отдых</name>
+        <coordinates>
+            <x>75</x>
+            <y>3000</y>
+        </coordinates>
+        <creationDate>2022-02-17T21:53:57.5651566+03:00[Europe/Moscow]</creationDate>
+        <from>
+            <x>15.5</x>
+            <y>100</y>
+            <name>Санкт-Петербург</name>
+        </from>
+        <to>
+            <x>609.0</x>
+            <y>600</y>
+            <name>Сочи</name>
+        </to>
+        <distance>6000</distance>
+    </Route>
+</list>
